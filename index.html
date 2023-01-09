@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/null.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <aside class="aside">
+      <nav class="aside__nav">
+        <div class="aside__title">Main</div>
+        <ul class="aside__list">
+          <li class="aside__item current-page">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-dashboard">
+                <use href="svg/icons.svg#icon-dashboard"></use>
+              </svg>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="aside__item">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-activity">
+                <use href="svg/icons.svg#icon-activity"></use>
+              </svg>
+              <p>Activity</p>
+            </a>
+          </li>
+        </ul>
+        <div class="aside__title">Pages</div>
+        <ul class="aside__list">
+          <li class="aside__item">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-landing-pages">
+                <use href="svg/icons.svg#icon-landing-pages"></use>
+              </svg>
+              <p>landing pages</p>
+              <p class="aside__numb">10/10</p>
+            </a>
+          </li>
+          <li class="aside__item">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-home">
+                <use href="svg/icons.svg#icon-home"></use>
+              </svg>
+              <p>home pages</p>
+              <p class="aside__numb">10/10</p>
+            </a>
+          </li>
+          <li class="aside__item">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-product-pages">
+                <use href="svg/icons.svg#icon-product-pages"></use>
+              </svg>
+              <p>product pages</p>
+              <p class="aside__numb">0/10</p>
+            </a>
+          </li>
+          <li class="aside__item aside-soon">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-collection-pages">
+                <use href="svg/icons.svg#icon-collection-pages"></use>
+              </svg>
+              <p>collection pages</p>
+            </a>
+          </li>
+          <li class="aside__item">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-blog-post">
+                <use href="svg/icons.svg#icon-blog-post"></use>
+              </svg>
+              <p>blog post pages</p>
+              <p class="aside__numb">10/10</p>
+            </a>
+          </li>
+        </ul>
+        <div class="aside__title">account</div>
+        <ul class="aside__list">
+          <li class="aside__item">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-profile">
+                <use href="svg/icons.svg#icon-profile"></use>
+              </svg>
+              <p>profile</p>
+            </a>
+          </li>
+          <li class="aside__item aside-soon">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-integrations">
+                <use href="svg/icons.svg#icon-integrations"></use>
+              </svg>
+              <p>integrations</p>
+            </a>
+          </li>
+          <li class="aside__item">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-settings">
+                <use href="svg/icons.svg#icon-settings"></use>
+              </svg>
+              <p>settings</p>
+            </a>
+          </li>
+          <li class="aside__item aside-soon">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-team">
+                <use href="svg/icons.svg#icon-team"></use>
+              </svg>
+              <p>team</p>
+            </a>
+          </li>
+        </ul>
+        <div class="aside__title">external links</div>
+        <ul class="aside__list">
+          <li class="aside__item">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-help">
+                <use href="svg/icons.svg#icon-help"></use>
+              </svg>
+              <p>help center</p>
+              <svg class="icon icon-external-link">
+                <use href="svg/icons.svg#icon-external-link"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="aside__item">
+            <a href="#" class="aside__link">
+              <svg class="icon icon-eye">
+                <use href="svg/icons.svg#icon-eye"></use>
+              </svg>
+              <p>visit your store</p>
+              <svg class="icon icon-external-link">
+                <use href="svg/icons.svg#icon-external-link"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__content">
+            <div class="header__form">
+              <svg class="header__search-icon icon icon-search">
+                <use href="svg/icons.svg#icon-search"></use>
+              </svg>
+              <input
+                placeholder="Search…"
+                type="text"
+                class="header__search-input"
+              />
+            </div>
+            <div class="header__bell">
+              <svg class="icon icon-bell">
+                <use href="svg/icons.svg#icon-bell"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="welcome">
+          <div class="welcome__container">
+            <div class="welcome__content">
+              <div class="welcome__text-content">
+                <div class="welcome__title">
+                  <h2>Hi, {Name}! Welcome to iBuilder</h2>
+                </div>
+                <div class="welcome__text">
+                  <p>Build easily Landing pages in the matter of minutes!</p>
+                </div>
+              </div>
+              <button class="welcome__btn">
+                <span class="welcome__btn-text">+ &nbsp;Create new Page</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="recent">
+          <div class="recent__container">
+            <div class="recent__content">
+              <div class="recent__item recent-pages">
+                <div class="recent__headline">
+                  <h3 class="recent__title">Recent Pages</h3>
+                </div>
+                <div class="recent-pages__body">
+                  <div class="recent-pages__item">
+                    <div class="recent-pages__img">
+                      <img src="img/img-placeholder.png" alt="" />
+                    </div>
+                    <div class="recent-pages__info">
+                      <div class="recent-pages__header">
+                        <div class="recent-pages__title recent__title">
+                          <h3>Page Title</h3>
+                        </div>
+                        <div class="recent-pages__category">Landing page</div>
+                      </div>
+                      <div class="recent-pages__sub-header">
+                        <div class="recent-pages__updated">
+                          <p>Last Updated 24 hours ago</p>
+                        </div>
+                        <div class="recent-pages__condition published">
+                          <p>Published</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recent-pages__actions">
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-eye">
+                          <use href="svg/icons.svg#icon-eye"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-pause">
+                          <use href="svg/icons.svg#icon-pause"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-delete">
+                          <use href="svg/icons.svg#icon-delete"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-external-link">
+                          <use href="svg/icons.svg#icon-external-link"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="recent-pages__item">
+                    <div class="recent-pages__img">
+                      <img src="img/img-placeholder.png" alt="" />
+                    </div>
+                    <div class="recent-pages__info">
+                      <div class="recent-pages__header">
+                        <div class="recent-pages__title recent__title">
+                          <h3>Awesome Page Title</h3>
+                        </div>
+                        <div class="recent-pages__category">Homepage</div>
+                      </div>
+                      <div class="recent-pages__sub-header">
+                        <div class="recent-pages__updated">
+                          <p>Last Updated 12 minutes ago</p>
+                        </div>
+                        <div class="recent-pages__condition published">
+                          <p>Draft</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recent-pages__actions">
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-eye">
+                          <use href="svg/icons.svg#icon-eye"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-pause">
+                          <use href="svg/icons.svg#icon-pause"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-delete">
+                          <use href="svg/icons.svg#icon-delete"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-external-link">
+                          <use href="svg/icons.svg#icon-external-link"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="recent-pages__item">
+                    <div class="recent-pages__img">
+                      <img src="img/img-placeholder.png" alt="" />
+                    </div>
+                    <div class="recent-pages__info">
+                      <div class="recent-pages__header">
+                        <div class="recent-pages__title recent__title">
+                          <h3>Very long cool and awesome Page Title</h3>
+                        </div>
+                        <div class="recent-pages__category">Product Page</div>
+                      </div>
+                      <div class="recent-pages__sub-header">
+                        <div class="recent-pages__updated">
+                          <p>Last Updated 1 day ago</p>
+                        </div>
+                        <div class="recent-pages__condition published">
+                          <p>Published</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recent-pages__actions">
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-eye">
+                          <use href="svg/icons.svg#icon-eye"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-pause">
+                          <use href="svg/icons.svg#icon-pause"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-delete">
+                          <use href="svg/icons.svg#icon-delete"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-external-link">
+                          <use href="svg/icons.svg#icon-external-link"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="recent-pages__item">
+                    <div class="recent-pages__img">
+                      <img src="img/img-placeholder.png" alt="" />
+                    </div>
+                    <div class="recent-pages__info">
+                      <div class="recent-pages__header">
+                        <div class="recent-pages__title recent__title">
+                          <h3>Page Title</h3>
+                        </div>
+                        <div class="recent-pages__category">
+                          Collection Page
+                        </div>
+                      </div>
+                      <div class="recent-pages__sub-header">
+                        <div class="recent-pages__updated">
+                          <p>Last Updated on 24.12.2022</p>
+                        </div>
+                        <div class="recent-pages__condition published">
+                          <p>Draft</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recent-pages__actions">
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-eye">
+                          <use href="svg/icons.svg#icon-eye"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-pause">
+                          <use href="svg/icons.svg#icon-pause"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-delete">
+                          <use href="svg/icons.svg#icon-delete"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-external-link">
+                          <use href="svg/icons.svg#icon-external-link"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="recent-pages__item">
+                    <div class="recent-pages__img">
+                      <img src="img/img-placeholder.png" alt="" />
+                    </div>
+                    <div class="recent-pages__info">
+                      <div class="recent-pages__header">
+                        <div class="recent-pages__title recent__title">
+                          <h3>Page Title</h3>
+                        </div>
+                        <div class="recent-pages__category">Blog Page</div>
+                      </div>
+                      <div class="recent-pages__sub-header">
+                        <div class="recent-pages__updated">
+                          <p>Last Updated 5 days ago</p>
+                        </div>
+                        <div class="recent-pages__condition published">
+                          <p>Draft</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recent-pages__actions">
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-eye">
+                          <use href="svg/icons.svg#icon-eye"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-pause">
+                          <use href="svg/icons.svg#icon-pause"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-delete">
+                          <use href="svg/icons.svg#icon-delete"></use>
+                        </svg>
+                      </button>
+                      <button class="recent-pages__btn">
+                        <svg class="icon icon-external-link">
+                          <use href="svg/icons.svg#icon-external-link"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="recent__item recent-posts">
+                <div class="recent__headline"></div>
+                <div class="recent-posts__content"></div>
+              </div>
+              <div class="recent__item recent-templates">
+                <div class="recent__headline"></div>
+                <div class="recent-templates__content"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

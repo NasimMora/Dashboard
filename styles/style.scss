@@ -1,0 +1,385 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Mulish:regular);
+
+@function percent($px, $from) {
+  @return round(math.div($px, $from) * 100 * 100%) / 100;
+}
+
+//REM
+@function rem($px) {
+  @return math.div($px, 16) + rem;
+}
+//EM
+@function em($px, $current: 16) {
+  @return math.div($px, $current) + em;
+}
+
+$fontFamily: "Lato";
+$mulish: "Mulish";
+
+$containerWidth: 1144px;
+$pc: $containerWidth + 42px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobile: 425px;
+$mainColor: #211b4e;
+$secColor: rgba(17, 15, 36, 0.4);
+$purpleColor: #575bde;
+$purpleBg: rgba(87, 91, 222, 0.2);
+
+html,
+body {
+  background-color: #ececee;
+}
+
+body {
+  font-size: rem(14);
+  line-height: 1.14;
+  font-family: $fontFamily;
+  color: $mainColor;
+}
+
+[class*="__container"] {
+  max-width: $containerWidth;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+}
+
+input,
+button,
+textarea {
+  font-family: $fontFamily;
+  line-height: 1.14;
+}
+
+.aside {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  background: #fff;
+
+  height: 100vh;
+  width: 240px;
+  padding: 0 12px;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 11;
+
+  &__title {
+    text-transform: uppercase;
+    margin-top: 15px;
+    padding: 0 8px;
+
+    font-weight: 700;
+    font-size: rem(12);
+    line-height: percent(16, 12);
+
+    color: rgba(47, 46, 65, 0.5);
+  }
+
+  &__list {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__item {
+    &:hover {
+      background: #ececee;
+      border-radius: 3px;
+    }
+    &.current-page {
+      color: $purpleColor;
+      font-weight: 700;
+      background: $purpleBg;
+      border-radius: 3px;
+      position: relative;
+      .aside__link {
+        padding: 6px 10px;
+      }
+      &::after {
+        content: "";
+        border: 2px solid #575bde;
+        height: 36px;
+        position: absolute;
+        top: 0;
+        right: -12px;
+      }
+    }
+    &.aside-soon {
+      color: $secColor;
+      a::after {
+        content: "soon";
+        background: #ff4677;
+        font-family: $mulish;
+        font-weight: 500;
+        font-size: rem(11);
+        line-height: 1;
+
+        padding: 2px 4.69px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__numb {
+    justify-self: end;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    color: $secColor;
+  }
+  &__link {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    padding: 5px 10px;
+
+    p {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.wrapper {
+  width: calc(100% - 240px);
+  margin: 0 0 0 auto;
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  border-bottom: 0.5px solid rgba(17, 15, 36, 0.4);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0px;
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__search-icon {
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    &.icon-search {
+      color: rgba(17, 15, 36, 0.4);
+
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+    }
+  }
+
+  &__search-input {
+    padding: 7px 8px 7px 29px;
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 10%);
+    border-radius: 3px;
+    background: #fff;
+  }
+
+  &__bell {
+    .icon-bell {
+      color: rgba(17, 15, 36, 0.4);
+    }
+  }
+}
+
+.main {
+}
+.welcome {
+  margin-top: 10px;
+  &__container {
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: 1.33;
+    color: #2f2e41;
+  }
+
+  &__text {
+    margin-top: 4px;
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: percent(16, 14);
+    display: flex;
+    padding: 12px 16px;
+    background: linear-gradient(
+      129.85deg,
+      #565adb -6.83%,
+      #5f63df -6.82%,
+      #676ae0 -6.81%,
+      #393ed8 81.77%
+    );
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 10%);
+    border-radius: 3px;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+
+  &__btn-text {
+  }
+}
+
+.recent {
+  margin-top: 21px;
+  &__container {
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: percent(735, 1115) percent(355, 1115);
+    gap: 25px;
+  }
+
+  &__item {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+
+  &__headline {
+    padding: 11px 16px;
+
+    background: #f6f6f9;
+    box-shadow: 0px 1px 0px #ececee;
+    border-radius: 4px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: 1.5;
+    text-transform: capitalize;
+  }
+}
+
+.recent-pages {
+  &__body {
+    padding: 0px 7px 21px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    margin-top: 10px;
+    gap: 16px;
+    border-bottom: 1px solid #ececee;
+    &:hover {
+      background: #ffffff;
+      box-shadow: 0px 0px 2px 1px rgba(87, 91, 222, 0.5);
+    }
+  }
+
+  &__img {
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__title {
+  }
+
+  &__category {
+    background: #f6f6f9;
+    color: #7b7b7b;
+    border-radius: 3px;
+    font-size: rem(12);
+    line-height: 1.33;
+    padding: 3px 5px;
+  }
+
+  &__sub-header {
+    margin-top: 5px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__updated {
+    color: rgba(17, 15, 36, 0.4);
+
+    text-transform: capitalize;
+  }
+
+  &__condition {
+    background: #ececee;
+    border-radius: 3px;
+    font-size: rem(12);
+    line-height: 1.33;
+    padding: 3px 5px;
+    color: #7b7b7b;
+    &.published {
+      background: rgba(99, 206, 99, 0.2);
+    }
+  }
+
+  &__actions {
+    flex: 0 1 20%;
+    display: flex;
+    gap: 5px;
+  }
+  &__btn {
+    display: flex;
+    transition: color 0.2s;
+    &:hover {
+      color: $purpleColor;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+    }
+    .icon-eye {
+    }
+    .icon-pause {
+    }
+    .icon-delete {
+    }
+    .icon-external-link {
+    }
+  }
+}
+
+.recent-posts {
+  &__content {
+  }
+}
+.recent-templates {
+  &__content {
+  }
+}
